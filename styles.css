@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* .container{
+    height: 200vh;
+} */
+.fluid1{
+    background-color: black;
+}
+.header{
+    background-color: rgba(155, 141, 141, 0.7);
+}
+.header .icons img{
+  width: 11% !important;
+  background-color: rgb(10, 8, 8);
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+@media screen and (max-width : 992px){
+    .header .icons img{
+        width: 15% !important;
+    }
+}
+
+.header .icons img:hover{
+    background-color: rgb(251, 0, 0);
+}
+.header .todo img{
+width: 10%;
+}
+.header p{
+    font-size: 30px;
+}
+
+
+.inputpart input{
+    width: 550px !important;
+  height: 50px !important;
+  border-radius: 5px;
+  outline: none;
+   background-color: rgba(255, 255, 255, 0.7);
+   /* box-shadow: none; */
+   /* border: none; */
+   color:black;
+   font-size: 20px;
+   
+}
+.inputpart input:focus{
+    box-shadow: 0 0 5px white ;
+}
+.inputpartchange  input{
+    box-shadow: 0 0 4px black !important;
+}
+.inputpartchange  input:focus{
+    box-shadow: 0 0 10px black !important;
+}
+
+.list-c{
+    /* width: 100%; */
+    height: 380px;
+    /* background-color: red; */
+    overflow-y:scroll; 
+    scroll-behavior: smooth;
+}
+.list-c::-webkit-scrollbar{
+    width: 15px;
+}
+.list-c::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px rgb(85, 85, 74);
+    border-radius: 10px;
+}
+.list-c::-webkit-scrollbar-thumb{
+    background-color: rgb(187, 79, 79);
+    border-radius: 50px;
+}
+.list-c::-webkit-scrollbar-thumb:hover{
+    background-color: red;
+}
+
+@media screen and (max-width : 768px) {
+    .inputpart input{
+        width: 400px !important;
+    } 
+    .header .icons img{
+        width: 19% !important;
+    }
+    .header p{
+        font-size: 28px;
+    }
+    .header .todo img{
+        width: 14%;
+        }
+}
+@media screen and (max-width : 575px){
+    .header .icons img{
+        width: 21% !important;
+    }
+    .span-btn{
+        padding: 15px 135px !important;
+        left: -20px;
+  }
+  .span-btn button{
+      padding:18px;
+      border-radius: 50px;
+      position: absolute;
+      top: -25px;
+      left: 110px !important;
+  }
+}
+@media screen and (max-width : 490px){
+    .inputpart input{
+        width: 300px !important;
+    } 
+}
+@media screen and (max-width : 430px) {
+    .header .icons img{
+        width: 24% !important;
+    }
+    .list-c{
+        height: 400px;
+    }
+    .span-btn{
+          padding: 15px 140px !important;
+          left: -20px;
+    }
+    .span-btn button{
+        padding:18px;
+        border-radius: 50px;
+        position: absolute;
+        top: -25px;
+        left: 110px !important;
+    }
+    .inputpart input{
+        width: 300px !important;
+    } 
+    
+}
+@media screen and (max-width : 380px){
+    .header .icons img{
+        width: 28% !important;
+    }
+    .inputpart input{
+        width: 200px !important;
+    }
+    .header p{
+        font-size: 24px;
+    }
+    .header .todo img{
+        width: 20%;
+        }
+        .span-btn{
+            padding: 15px 110px !important;
+            left: -20px;
+      }
+      .span-btn button{
+          padding:18px;
+          border-radius: 50px;
+          position: absolute;
+          top: -25px;
+          left: 90px !important;
+      }
+}
+@media screen and (max-width:340px) {
+    .header .icons img{
+        width: 35% !important;
+    }
+}
+
+.listcontainer{
+    list-style: none;
+}
+.listcontainer li{
+    background-color: rgb(68, 73, 83);
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    user-select: none;
+    padding-left: 60px;
+    font-size: 20px;
+    color: yellow;
+}
+.listcontainer li::before{
+    content: " ";
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-position: center;
+    background-size: cover;
+}
+.listcontainer li span{
+    float: right;
+    font-size: 20px;
+    /* background-color: wheat; */
+    padding: 5px 13px;
+    position: relative;
+    top: -10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.listcontainer li.checked{
+    color: red;
+}
+.listcontainer li.checked::before{
+    background-image: url(images/checked.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.listcontainer li span:hover{
+   background-color: rgb(244, 238, 238,0.4);
+}
+.span-btn{
+    padding: 15px 180px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+}
+.span-btn button{
+    padding:18px;
+    border-radius: 50px;
+    position: absolute;
+    top: -25px;
+    left: 150px;
+    outline: none;
+    border: 1px solid yellow;
+    box-shadow: none;
+    background-color: red;
+    transition: 1s;
+}
+.span-btn button:hover{
+    transform: translateY(-10px);
+}
+.hrline{
+    width: 100%;
+    border: 1px solid red;
+    height: 0px !important;
+}
+.col1{
+    width: 100%;
+    height: 2px;
+    background-color: rgba(190, 175, 175);
+}
+.devlo{
+    color: white ;
+}
+.dtls p{
+    color: white;
+    font-size: 18px;
+}
+
+.dtls p a{
+    
+    color:whitesmoke;
+}
+
+
+
+
+.fluid0{
+    background-color: rgb(241, 196, 196,0.5) !important;
+}
+.dtlschange p a{
+    color: black !important;
+}
+.dtlschange p{
+    color: black !important;
+}
+.devlochange{
+    color: black !important;
+}
